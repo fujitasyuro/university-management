@@ -1,0 +1,220 @@
+.container {
+  background-color: #fbfbfb;
+  min-height: 100vh;
+  padding: 70px 0 0 85px;
+
+  &__home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "h1 h2 h3"
+      "h4 h4 h4";
+    padding: 0 50px;
+
+    &__info {
+      margin-top: 15px;
+      grid-area: h1;
+      position: relative;
+      overflow: hidden;
+
+      &__detail {
+        background-color: $light-blue;
+        padding: 20px;
+        border-radius: 15px;
+        height: 350px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        font-size: 18px;
+
+        &__main {
+          position: relative;
+          z-index: 100;
+
+          div {
+            margin-bottom: 10px;
+          }
+
+          .title {
+            font-weight: 600;
+          }
+
+          .content {
+            margin-left: 5px;
+          }
+        }
+
+        .text--big {
+          font-size: 330px;
+          font-weight: 900;
+          position: absolute;
+          bottom: -100px;
+          right: 0;
+          color: #00b4d8;
+          opacity: 0.2;
+          cursor: default;
+          pointer-events: none;
+        }
+
+        &__btn {
+          position: absolute;
+          width: fit-content;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 30px;
+        }
+      }
+    }
+
+    &__exercise {
+      grid-area: h2;
+      overflow: hidden;
+      padding: 0 10px;
+      height: 412px;
+
+      h1 {
+        margin: 15px 0 10px 0;
+        padding-left: 30px;
+      }
+
+      &__item {
+        background-color: #eeeeee;
+        width: 500px;
+        height: 100px;
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+        margin-bottom: 15px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &__deadline {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: white;
+          padding: 5px 30px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+          .day {
+            font-weight: 600;
+            font-size: 45px;
+            color: $red;
+            text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+          }
+
+          .month {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 0;
+          }
+        }
+
+        &__detail {
+          padding: 5px 15px;
+          display: flex;
+          flex-direction: column;
+
+          .unit {
+            color: $blue;
+            font-size: 14px;
+          }
+
+          .title {
+            font-weight: 600;
+            font-size: 28px;
+          }
+
+          .desc {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+          }
+        }
+      }
+    }
+
+    &__activities {
+      margin-top: 15px;
+      grid-area: h3;
+
+      &__table {
+        background-color: #eeeeee;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        table thead th {
+          font-size: 18px;
+          padding: 0 0 10px 0;
+        }
+
+        table thead th:first-child {
+          width: 450px;
+          text-align: left;
+        }
+        table thead th:last-child {
+          width: 130px;
+          text-align: center;
+        }
+
+        table tbody tr td:first-child {
+          width: 450px;
+        }
+        table tbody tr td:last-child {
+          width: 130px;
+          text-align: center;
+          border-left: 1px solid;
+        }
+      }
+    }
+
+    &__schedule {
+      grid-area: h4;
+
+      h1 {
+        padding: 12px 0 0 145px;
+      }
+
+      &__table {
+        height: 400px;
+        width: fit-content;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: auto;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #eeeeee;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        table {
+          border-spacing: 0;
+        }
+
+        thead th {
+          border-bottom: 1px solid;
+          padding-bottom: 10px;
+        }
+
+        tbody tr td {
+          text-align: center;
+          padding: 5px 25px;
+          border-bottom: 1px solid;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+}
+
+.content--active {
+  display: grid;
+}

@@ -1,0 +1,35 @@
+.btn {
+  outline: none;
+  padding: 8px 30px;
+  border-radius: 100rem;
+  border: 2px solid;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.btn + .btn {
+  margin-left: 15px;
+}
+
+.btn--seemore {
+  border: 2px solid $gray-blue;
+  background-color: $blue;
+  font-weight: 700;
+  color: white;
+}
+
+.btn--seemore:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.btn--update {
+  border: 2px solid $gray-green;
+  background-color: $green;
+  color: white;
+  font-weight: 700;
+}
+
+.btn--update:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
